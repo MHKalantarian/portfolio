@@ -157,23 +157,6 @@ class _HomeState extends State<Home> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Container(
-                  width: 100,
-                  height: 100,
-                  margin: const EdgeInsets.symmetric(vertical: 20),
-                  decoration: BoxDecoration(
-                    color: AppColors.primary,
-                    borderRadius: BorderRadius.circular(1000),
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(1000),
-                    child: Image.asset(
-                      'images/avatar.jpg',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                Divider(),
                 ListTile(
                   onTap: _scrollToAbout,
                   title: Text(
