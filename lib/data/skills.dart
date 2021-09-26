@@ -9,10 +9,9 @@ List<Skill> SKILLS = [
   Skill(name: 'Java'),
   Skill(name: 'Kotlin'),
   Skill(name: 'Dart'),
-  Skill(name: 'Php'),
-  Skill(name: 'Java Script'),
+  Skill(name: 'Android'),
+  Skill(name: 'iOS'),
   Skill(name: 'Flutter'),
-  Skill(name: 'NodeJs'),
-  Skill(name: 'Laravel'),
+  Skill(name: 'SQL'),
   Skill(name: 'Git'),
 ];

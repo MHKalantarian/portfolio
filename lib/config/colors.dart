@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 mixin AppColors {
-  static final yellow = Colors.yellow[800];
+  static final primary = Colors.blue[500];
 
   static final black = Colors.black87;
 

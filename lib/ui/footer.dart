@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'responsive_widget.dart';
-import '../data/projects.dart';
-import '../config/constants.dart';
 import '../config/colors.dart';
+import '../config/constants.dart';
+import '../data/projects.dart';
 import 'icon.dart';
+import 'responsive_widget.dart';
 
 class Footer extends StatelessWidget {
   final String _getInTouch =
-      "You have an idea, I am here to turn your dream into real digital solution.";
-  final String _description =
-      "I am developer has around 4 years experience developing mobile and web applications, using different languages and techniques.";
+      "If you have an idea, I’m here to turn your dream into a digital solution.";
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +25,7 @@ class Footer extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Get in touch
+                // Contact me
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,11 +35,11 @@ class Footer extends StatelessWidget {
                           Container(
                             width: 2,
                             height: 20,
-                            color: AppColors.yellow,
+                            color: AppColors.primary,
                           ),
                           const SizedBox(width: 7.5),
                           Text(
-                            'GET IN TOUCH',
+                            'CONTACT ME',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w700,
@@ -89,56 +87,6 @@ class Footer extends StatelessWidget {
                           fontSize: 13,
                         ),
                       ),
-                      const SizedBox(height: 20),
-                      Text(
-                        'Location',
-                        style: TextStyle(
-                          color: AppColors.greyLight,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                      const SizedBox(height: 7),
-                      Text(
-                        AppConstants.location,
-                        style: TextStyle(
-                          color: AppColors.greyLight,
-                          fontSize: 13,
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(width: 20),
-                // Aout me
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 2,
-                            height: 20,
-                            color: AppColors.yellow,
-                          ),
-                          const SizedBox(width: 7.5),
-                          Text(
-                            'ABOUT ME',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          )
-                        ],
-                      ),
-                      const SizedBox(height: 20),
-                      Text(
-                        _description,
-                        style: TextStyle(
-                          color: AppColors.greyLight,
-                          fontSize: 13,
-                        ),
-                      ),
                     ],
                   ),
                 ),
@@ -153,7 +101,7 @@ class Footer extends StatelessWidget {
                           Container(
                             width: 2,
                             height: 20,
-                            color: AppColors.yellow,
+                            color: AppColors.primary,
                           ),
                           const SizedBox(width: 7.5),
                           Text(
@@ -170,7 +118,7 @@ class Footer extends StatelessWidget {
                         spacing: 10,
                         runSpacing: 10,
                         children: PROJECTS
-                            .take(4)
+                            .take(6)
                             .map((p) => _buildProject(context, p))
                             .toList(),
                       )
@@ -186,17 +134,8 @@ class Footer extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Proudly powered by OuahidDev ©${DateTime.now().year}',
-                  style: TextStyle(
-                    color: AppColors.greyLight!.withOpacity(.75),
-                  ),
-                ),
-                Row(children: _socialMedia()),
-              ],
-            )
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: _socialMedia())
           ],
         ),
       ),
@@ -216,11 +155,11 @@ class Footer extends StatelessWidget {
                     Container(
                       width: 2,
                       height: 20,
-                      color: AppColors.yellow,
+                      color: AppColors.primary,
                     ),
                     const SizedBox(width: 7.5),
                     Text(
-                      'GET IN TOUCH',
+                      'CONTACT ME',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
@@ -268,54 +207,6 @@ class Footer extends StatelessWidget {
                     fontSize: 13,
                   ),
                 ),
-                const SizedBox(height: 20),
-                Text(
-                  'Location',
-                  style: TextStyle(
-                    color: AppColors.greyLight,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-                const SizedBox(height: 7),
-                Text(
-                  AppConstants.location,
-                  style: TextStyle(
-                    color: AppColors.greyLight,
-                    fontSize: 13,
-                  ),
-                )
-              ],
-            ),
-            const SizedBox(height: 30),
-            // Aout me
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      width: 2,
-                      height: 20,
-                      color: AppColors.yellow,
-                    ),
-                    const SizedBox(width: 7.5),
-                    Text(
-                      'ABOUT ME',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 20),
-                Text(
-                  _description,
-                  style: TextStyle(
-                    color: AppColors.greyLight,
-                    fontSize: 13,
-                  ),
-                ),
               ],
             ),
             const SizedBox(height: 30),
@@ -328,7 +219,7 @@ class Footer extends StatelessWidget {
                     Container(
                       width: 2,
                       height: 20,
-                      color: AppColors.yellow,
+                      color: AppColors.primary,
                     ),
                     const SizedBox(width: 7.5),
                     Text(
@@ -345,7 +236,7 @@ class Footer extends StatelessWidget {
                   spacing: 10,
                   runSpacing: 10,
                   children: PROJECTS
-                      .take(4)
+                      .take(3)
                       .map((p) => _buildProject(context, p))
                       .toList(),
                 )
@@ -362,14 +253,6 @@ class Footer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: _socialMedia(),
               ),
-            ),
-            const SizedBox(height: 20),
-            Text(
-              'Proudly powered by OuahidDev ©${DateTime.now().year}',
-              style: TextStyle(
-                color: AppColors.greyLight!.withOpacity(.75),
-              ),
-              textAlign: TextAlign.center,
             ),
           ],
         ),
@@ -412,20 +295,6 @@ class Footer extends StatelessWidget {
             launch(AppConstants.linkedin);
           },
           child: AppIcon('icons/linkedin.png'),
-        ),
-        const SizedBox(width: 20),
-        InkWell(
-          onTap: () {
-            launch(AppConstants.twitter);
-          },
-          child: AppIcon('icons/twitter.png'),
-        ),
-        const SizedBox(width: 20),
-        InkWell(
-          onTap: () {
-            launch(AppConstants.facebook);
-          },
-          child: AppIcon('icons/facebook.png'),
-        ),
+        )
       ];
 }

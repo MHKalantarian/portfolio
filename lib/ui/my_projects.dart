@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'responsive_widget.dart';
-import '../data/projects.dart';
-import '../config/styles.dart';
 import '../config/colors.dart';
+import '../config/styles.dart';
+import '../data/projects.dart';
+import 'responsive_widget.dart';
 
 class MyProjects extends StatelessWidget {
   @override
@@ -16,9 +16,9 @@ class MyProjects extends StatelessWidget {
         child: Column(
           children: [
             Text('MY PROJECTS', style: AppStyles.title),
-            Container(width: 100, height: 2, color: AppColors.yellow),
+            Container(width: 100, height: 2, color: AppColors.primary),
             const SizedBox(height: 3),
-            Container(width: 75, height: 2, color: AppColors.yellow),
+            Container(width: 75, height: 2, color: AppColors.primary),
             const SizedBox(height: 50),
             ...PROJECTS.map((p) => _buildProject(context, p)).toList(),
           ],
@@ -37,9 +37,9 @@ class MyProjects extends StatelessWidget {
               style: AppStyles.title,
               textAlign: TextAlign.center,
             ),
-            Container(width: 75, height: 2, color: AppColors.yellow),
+            Container(width: 75, height: 2, color: AppColors.primary),
             const SizedBox(height: 3),
-            Container(width: 50, height: 2, color: AppColors.yellow),
+            Container(width: 50, height: 2, color: AppColors.primary),
             const SizedBox(height: 50),
             Wrap(
               children: PROJECTS.map((p) => _buildProject(context, p)).toList(),
@@ -94,10 +94,10 @@ class MyProjects extends StatelessWidget {
                           onPressed: () {
                             launch(project.url!);
                           },
-                          color: AppColors.yellow,
-                          textColor: AppColors.yellow,
+                          color: AppColors.primary,
+                          textColor: AppColors.primary,
                           borderSide: BorderSide(
-                            color: AppColors.yellow!.withOpacity(.5),
+                            color: AppColors.primary!.withOpacity(.5),
                             width: 5,
                           ),
                           padding: const EdgeInsets.symmetric(
@@ -158,10 +158,10 @@ class MyProjects extends StatelessWidget {
                 onPressed: () {
                   launch(project.url!);
                 },
-                color: AppColors.yellow,
-                textColor: AppColors.yellow,
+                color: AppColors.primary,
+                textColor: AppColors.primary,
                 borderSide: BorderSide(
-                  color: AppColors.yellow!.withOpacity(.5),
+                  color: AppColors.primary!.withOpacity(.5),
                   width: 5,
                 ),
                 padding: const EdgeInsets.symmetric(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/ui/responsive_widget.dart';
+import 'package:portfolio/ui/responsive_widget.dart';
 
-import '../config/styles.dart';
 import '../config/colors.dart';
+import '../config/styles.dart';
 import 'icon.dart';
 
 class WorkingProcess extends StatelessWidget {
@@ -18,9 +18,9 @@ class WorkingProcess extends StatelessWidget {
         child: Column(
           children: [
             Text('WORKING PROCESS', style: AppStyles.title),
-            Container(width: 100, height: 2, color: AppColors.yellow),
+            Container(width: 100, height: 2, color: AppColors.primary),
             const SizedBox(height: 3),
-            Container(width: 75, height: 2, color: AppColors.yellow),
+            Container(width: 75, height: 2, color: AppColors.primary),
             const SizedBox(height: 50),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -31,7 +31,7 @@ class WorkingProcess extends StatelessWidget {
                       '01.',
                       'icons/pencil.png',
                       'Plan',
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor laboris nisi ut aliquip ex ea commodo.'),
+                      'I analyze your request and provide you a plan divided into 3 or more phases to complete your request.'),
                 ),
                 const SizedBox(width: 10),
                 Expanded(
@@ -40,7 +40,7 @@ class WorkingProcess extends StatelessWidget {
                       '02.',
                       'icons/design.png',
                       'Design',
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor laboris nisi ut aliquip ex ea commodo.'),
+                      'I design each and every page of your project and provide a wireframe or a graphical interface.'),
                 ),
                 const SizedBox(width: 10),
                 Expanded(
@@ -49,7 +49,7 @@ class WorkingProcess extends StatelessWidget {
                       '03.',
                       'icons/coding.png',
                       'Code',
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor laboris nisi ut aliquip ex ea commodo.'),
+                      'I start the development of your project and provide an output every phase for you to analyze and give your feedback.'),
                 )
               ],
             ),
@@ -69,18 +69,18 @@ class WorkingProcess extends StatelessWidget {
               style: AppStyles.title,
               textAlign: TextAlign.center,
             ),
-            Container(width: 75, height: 2, color: AppColors.yellow),
+            Container(width: 75, height: 2, color: AppColors.primary),
             const SizedBox(height: 3),
-            Container(width: 50, height: 2, color: AppColors.yellow),
+            Container(width: 50, height: 2, color: AppColors.primary),
             const SizedBox(height: 50),
             __buildProcess(context, '01.', 'icons/pencil.png', 'Plan',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor laboris nisi ut aliquip ex ea commodo.'),
+                'I analyze your request and provide you a plan divided into 3 or more phases to complete your request.'),
             const SizedBox(height: 10),
             __buildProcess(context, '02.', 'icons/design.png', 'Design',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor laboris nisi ut aliquip ex ea commodo.'),
+                'I design each and every page of your project and provide a wireframe or a graphical interface.'),
             const SizedBox(height: 10),
             __buildProcess(context, '03.', 'icons/coding.png', 'Code',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor laboris nisi ut aliquip ex ea commodo.'),
+                'I start the development of your project and provide an output every phase for you to analyze and give your feedback.'),
           ],
         ),
       ),

@@ -1,14 +1,13 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/ui/icon.dart';
 import 'package:mailto/mailto.dart';
+import 'package:portfolio/ui/icon.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-import 'responsive_widget.dart';
+import '../config/colors.dart';
 import '../config/constants.dart';
 import '../config/styles.dart';
-import '../config/colors.dart';
 import '../utils/extensions.dart';
+import 'responsive_widget.dart';
 
 class ContactUs extends StatefulWidget {
   @override
@@ -34,42 +33,11 @@ class _ContactUsState extends State<ContactUs> {
         child: Column(
           children: [
             Text('GET IN TOUCH', style: AppStyles.title),
-            Container(width: 100, height: 2, color: AppColors.yellow),
+            Container(width: 100, height: 2, color: AppColors.primary),
             const SizedBox(height: 3),
-            Container(width: 75, height: 2, color: AppColors.yellow),
+            Container(width: 75, height: 2, color: AppColors.primary),
             const SizedBox(height: 50),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      _buildContactInfo(
-                        'icons/email.png',
-                        'Mail Us:',
-                        AppConstants.mail,
-                      ),
-                      const SizedBox(height: 20),
-                      _buildContactInfo(
-                        'icons/call.png',
-                        'Call Us:',
-                        AppConstants.phone,
-                      ),
-                      const SizedBox(height: 20),
-                      _buildContactInfo(
-                        'icons/pin.png',
-                        'Visit Us:',
-                        AppConstants.location,
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: _buildContactForm(context),
-                ),
-              ],
-            )
+            _buildContactForm(context)
           ],
         ),
       ),
@@ -86,38 +54,11 @@ class _ContactUsState extends State<ContactUs> {
               style: AppStyles.title,
               textAlign: TextAlign.center,
             ),
-            Container(width: 75, height: 2, color: AppColors.yellow),
+            Container(width: 75, height: 2, color: AppColors.primary),
             const SizedBox(height: 3),
-            Container(width: 50, height: 2, color: AppColors.yellow),
+            Container(width: 50, height: 2, color: AppColors.primary),
             const SizedBox(height: 50),
-            Column(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _buildContactInfo(
-                      'icons/email.png',
-                      'Mail Us:',
-                      AppConstants.mail,
-                    ),
-                    const SizedBox(height: 20),
-                    _buildContactInfo(
-                      'icons/call.png',
-                      'Call Us:',
-                      AppConstants.phone,
-                    ),
-                    const SizedBox(height: 20),
-                    _buildContactInfo(
-                      'icons/pin.png',
-                      'Visit Us:',
-                      AppConstants.location,
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 50),
-                _buildContactForm(context),
-              ],
-            )
+            _buildContactForm(context)
           ],
         ),
       ),
@@ -218,7 +159,7 @@ class _ContactUsState extends State<ContactUs> {
               ),
               const SizedBox(height: 20),
               RaisedButton(
-                color: AppColors.yellow,
+                color: AppColors.primary,
                 textColor: Colors.white,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
@@ -236,22 +177,14 @@ class _ContactUsState extends State<ContactUs> {
     bool isValidForm = _formKey.currentState!.validate();
     if (!isValidForm) return;
 
-    final mailto = Mailto(
+    final mailtoLink = Mailto(
       to: [AppConstants.mail],
+      cc: [_emailController.text.trim()],
       subject: _nameController.text.trim(),
       body: _contentController.text.trim(),
     );
 
-    final server = await HttpServer.bind(InternetAddress.loopbackIPv4, 3000);
-    String renderHtml(Mailto mailto) =>
-        '''<html><head><title>mailto example</title></head><body><a href="$mailto">Open mail client</a></body></html>''';
-    await for (HttpRequest request in server) {
-      request.response
-        ..statusCode = HttpStatus.ok
-        ..headers.contentType = ContentType.html
-        ..write(renderHtml(mailto));
-      await request.response.close();
-    }
+    await launch('$mailtoLink');
   }
 
   @override

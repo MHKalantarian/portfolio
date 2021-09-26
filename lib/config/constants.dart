@@ -1,20 +1,12 @@
 mixin AppConstants {
-  static final String mail = 'abdeluached@gmail.com';
+  static final String mail = 'MHKalantarian@gmail.com';
 
-  static final String phone = '(+213) 06 98 92 05 24';
+  static final String phone = '(+98) 912 866 7882';
 
-  static final String location = 'Touggourt, Ouargla, Algeria';
+  static final String github = 'https://github.com/MHKalantarian';
 
-  static final String github = 'https://github.com/GeekAbdelouahed';
-
-  static final String linkedin =
-      'https://www.linkedin.com/in/abdelouahed-medjoudja';
-
-  static final String twitter = 'https://twitter.com/MedAbdelouahed';
-
-  static final String facebook =
-      'https://www.facebook.com/AbdelouahedMedjoudja';
+  static final String linkedin = 'https://www.linkedin.com/in/MHKalantarian';
 
   static final String cv =
-      'https://drive.google.com/file/d/1L1gHsEO4nKY-_JW4dVU6Cml7RvxOP1ep/view?usp=sharing';
+      'https://docs.google.com/document/d/18T0URd8qV8CT1tV4a10jEGsC0toGgVAkxaalL4RlujY/view';
 }

@@ -1,9 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_web_portfolio/ui/responsive_widget.dart';
+import 'package:portfolio/ui/responsive_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../config/colors.dart';
+import '../config/constants.dart';
 import 'about.dart';
 import 'contact_us.dart';
 import 'footer.dart';
@@ -12,8 +14,6 @@ import 'icon.dart';
 import 'my_projects.dart';
 import 'statistics.dart';
 import 'working_process.dart';
-import '../config/colors.dart';
-import '../config/constants.dart';
 
 class Home extends StatefulWidget {
   Home({Key? key}) : super(key: key);
@@ -86,15 +86,6 @@ class _HomeState extends State<Home> {
                   padding: EdgeInsets.only(
                     left: MediaQuery.of(context).size.width * .15,
                   ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(1000),
-                    child: Container(
-                      width: 40,
-                      height: 40,
-                      color: AppColors.yellow,
-                      child: Image.asset('images/ouahid.png'),
-                    ),
-                  ),
                 ),
                 bottom: PreferredSize(
                   preferredSize: Size.fromHeight(500),
@@ -139,7 +130,7 @@ class _HomeState extends State<Home> {
                       const SizedBox(width: 20),
                       RaisedButton(
                         onPressed: _scrollToContactUs,
-                        color: AppColors.yellow,
+                        color: AppColors.primary,
                         padding: const EdgeInsets.symmetric(
                           horizontal: 40,
                           vertical: 15,
@@ -171,13 +162,13 @@ class _HomeState extends State<Home> {
                   height: 100,
                   margin: const EdgeInsets.symmetric(vertical: 20),
                   decoration: BoxDecoration(
-                    color: AppColors.yellow,
+                    color: AppColors.primary,
                     borderRadius: BorderRadius.circular(1000),
                   ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(1000),
                     child: Image.asset(
-                      'images/ouahid.png',
+                      'images/avatar.jpg',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -216,7 +207,7 @@ class _HomeState extends State<Home> {
                 ListTile(
                   title: RaisedButton(
                     onPressed: _scrollToContactUs,
-                    color: AppColors.yellow,
+                    color: AppColors.primary,
                     padding: const EdgeInsets.symmetric(
                       horizontal: 40,
                       vertical: 15,
@@ -232,7 +223,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     InkWell(
-                      onTap: () async {
+                      onTap: () {
                         launch(AppConstants.github);
                       },
                       child: AppIcon(
@@ -249,27 +240,7 @@ class _HomeState extends State<Home> {
                         'icons/linkedin.png',
                         color: AppColors.black,
                       ),
-                    ),
-                    const SizedBox(width: 20),
-                    InkWell(
-                      onTap: () {
-                        launch(AppConstants.twitter);
-                      },
-                      child: AppIcon(
-                        'icons/twitter.png',
-                        color: AppColors.black,
-                      ),
-                    ),
-                    const SizedBox(width: 20),
-                    InkWell(
-                      onTap: () {
-                        launch(AppConstants.facebook);
-                      },
-                      child: AppIcon(
-                        'icons/facebook.png',
-                        color: AppColors.black,
-                      ),
-                    ),
+                    )
                   ],
                 ),
                 const SizedBox(height: 20),
@@ -303,8 +274,8 @@ class _HomeState extends State<Home> {
                         child: Container(
                           width: 40,
                           height: 40,
-                          color: AppColors.yellow,
-                          child: Image.asset('images/ouahid.png'),
+                          color: AppColors.primary,
+                          child: Image.asset('images/avatar.jpg'),
                         ),
                       ),
                     ),
