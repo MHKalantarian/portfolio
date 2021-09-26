@@ -1,7 +1,7 @@
 mixin AppConstants {
   static final String mail = 'MHKalantarian@gmail.com';
 
-  static final String phone = '(+98) 912 866 7882';
+  static final String phone = '(+98) 912 866 7882\n(+98) 936 554 2971';
 
   static final String github = 'https://github.com/MHKalantarian';
 
