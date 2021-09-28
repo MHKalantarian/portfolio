@@ -14,7 +14,7 @@ List<Project> PROJECTS = [
     name: 'Hi Kish',
     description:
         'Comprehensive intelligent location-based service system "Hi" with attractive and dynamic design for residents of the beautiful island of Kish and tourists, with the slogan "Always here, by your side and for you" and with the aim of using more technology, increasing speed and quality in receiving services.',
-    image: 'images/projects/hikish.png',
+    image: 'images/projects/hikish.jpg',
     url: 'https://hi-kish.ir',
     skills: [
       'Dart',
