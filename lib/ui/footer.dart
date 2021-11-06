@@ -91,7 +91,7 @@ class Footer extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 20),
-                // My projects
+                // MY RECENT PROJECTS
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -210,7 +210,7 @@ class Footer extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 30),
-            // My projects
+            // MY RECENT PROJECTS
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

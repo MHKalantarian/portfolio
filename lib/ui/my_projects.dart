@@ -15,7 +15,7 @@ class MyProjects extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 100),
         child: Column(
           children: [
-            Text('MY PROJECTS', style: AppStyles.title),
+            Text('MY RECENT PROJECTS', style: AppStyles.title),
             Container(width: 100, height: 2, color: AppColors.primary),
             const SizedBox(height: 3),
             Container(width: 75, height: 2, color: AppColors.primary),
@@ -33,7 +33,7 @@ class MyProjects extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'MY PROJECTS',
+              'MY RECENT PROJECTS',
               style: AppStyles.title,
               textAlign: TextAlign.center,
             ),

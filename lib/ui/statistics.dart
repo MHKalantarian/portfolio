@@ -16,11 +16,12 @@ class Statistics extends StatelessWidget {
         ),
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          _buildStatistic(
-              context, 'icons/briefcase.png', '8+', 'Years of Experience'),
-          _buildStatistic(context, 'icons/menu.png', '${PROJECTS.length}+',
+          _buildStatistic(context, 'icons/briefcase.png',
+              '${new DateTime.now().year - 2012}+', 'Years of Experience'),
+          _buildStatistic(context, 'icons/menu.png', '${PROJECTS.length + 25}+',
               'Projects Done'),
-          _buildStatistic(context, 'icons/happy.png', '100+', 'Happy Clients'),
+          _buildStatistic(context, 'icons/happy.png',
+              '${PROJECTS.length * 15}K+', 'Happy Users'),
           _buildStatistic(context, 'icons/coffee.png', '∞', 'Coffee Cups'),
         ]),
       ),
@@ -32,14 +33,14 @@ class Statistics extends StatelessWidget {
         ),
         child: Column(
           children: [
-            _buildStatistic(
-                context, 'icons/briefcase.png', '8+', 'Years of Experience'),
+            _buildStatistic(context, 'icons/briefcase.png',
+                '${new DateTime.now().year - 2012}+', 'Years of Experience'),
             const SizedBox(height: 50),
-            _buildStatistic(context, 'icons/menu.png', '${PROJECTS.length}+',
-                'Projects Done'),
+            _buildStatistic(context, 'icons/menu.png',
+                '${PROJECTS.length + 25}+', 'Projects Done'),
             const SizedBox(height: 50),
-            _buildStatistic(
-                context, 'icons/happy.png', '100+', 'Happy Clients'),
+            _buildStatistic(context, 'icons/happy.png',
+                '${PROJECTS.length * 15}K+', 'Happy Users'),
             const SizedBox(height: 50),
             _buildStatistic(context, 'icons/coffee.png', '∞', 'Coffee Cups'),
           ],
