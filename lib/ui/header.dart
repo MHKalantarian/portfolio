@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/responsive_widget.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../config/colors.dart';
-import '../config/constants.dart';
 
 class Header extends StatelessWidget {
   final String _name = "Mohammad Hossein Kalantarian";
@@ -20,7 +18,7 @@ class Header extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'I’m $_name',
+                '$_name',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 40,
@@ -48,7 +46,7 @@ class Header extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  'I’m $_name',
+                  '$_name',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 30,
@@ -69,8 +67,4 @@ class Header extends StatelessWidget {
           ),
         ),
       );
-
-  void _downloadCV() {
-    launch(AppConstants.cv);
-  }
 }

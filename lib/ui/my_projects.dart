@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../config/colors.dart';
 import '../config/styles.dart';
@@ -92,7 +92,8 @@ class MyProjects extends StatelessWidget {
                         ),
                         OutlineButton(
                           onPressed: () {
-                            launch(project.url!);
+                            launchUrlString(project.url!,
+                                webOnlyWindowName: '_blank');
                           },
                           color: AppColors.primary,
                           textColor: AppColors.primary,
@@ -156,7 +157,7 @@ class MyProjects extends StatelessWidget {
               ),
               OutlineButton(
                 onPressed: () {
-                  launch(project.url!);
+                  launchUrlString(project.url!, webOnlyWindowName: '_blank');
                 },
                 color: AppColors.primary,
                 textColor: AppColors.primary,

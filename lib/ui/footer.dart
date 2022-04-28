@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../config/colors.dart';
 import '../config/constants.dart';
@@ -262,22 +262,70 @@ class Footer extends StatelessWidget {
 
   Widget _buildProject(BuildContext context, Project project) => InkWell(
         onTap: () {
-          launch(project.url!);
+          launchUrlString(project.url!, webOnlyWindowName: '_blank');
         },
         child: ResponsiveWidget(
           desktopScreen: Container(
-            color: AppColors.greyLight,
-            padding: const EdgeInsets.all(15),
+            decoration: BoxDecoration(
+                color: AppColors.greyLight,
+                borderRadius: BorderRadius.all(Radius.circular(5))),
             width: MediaQuery.of(context).size.width * .1,
             height: MediaQuery.of(context).size.width * .1,
-            child: Image.asset(project.image!),
+            child: Padding(
+              padding: const EdgeInsets.all(15),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Image.asset(project.image!),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: AppColors.black.withOpacity(.7),
+                        borderRadius: BorderRadius.all(Radius.circular(5))),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 5,
+                    ),
+                    child: Text(
+                      project.name!,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  )
+                ],
+              ),
+            ),
           ),
           mobileScreen: Container(
-            color: AppColors.greyLight,
-            padding: const EdgeInsets.all(15),
+            decoration: BoxDecoration(
+                color: AppColors.greyLight,
+                borderRadius: BorderRadius.all(Radius.circular(5))),
             width: MediaQuery.of(context).size.width * .2,
             height: MediaQuery.of(context).size.width * .2,
-            child: Image.asset(project.image!),
+            child: Padding(
+              padding: const EdgeInsets.all(15),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Image.asset(project.image!),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: AppColors.black.withOpacity(.7),
+                        borderRadius: BorderRadius.all(Radius.circular(5))),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 5,
+                    ),
+                    child: Text(
+                      project.name!,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  )
+                ],
+              ),
+            ),
           ),
         ),
       );
@@ -285,14 +333,14 @@ class Footer extends StatelessWidget {
   List<Widget> _socialMedia() => [
         InkWell(
           onTap: () async {
-            launch(AppConstants.github);
+            launchUrlString(AppConstants.github, webOnlyWindowName: '_blank');
           },
           child: AppIcon('icons/github.png'),
         ),
         const SizedBox(width: 20),
         InkWell(
           onTap: () {
-            launch(AppConstants.linkedin);
+            launchUrlString(AppConstants.linkedin, webOnlyWindowName: '_blank');
           },
           child: AppIcon('icons/linkedin.png'),
         )

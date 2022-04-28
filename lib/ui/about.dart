@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../config/colors.dart';
 import '../config/constants.dart';
@@ -64,7 +64,7 @@ class About extends StatelessWidget {
                           textColor: Colors.white,
                           padding: const EdgeInsets.symmetric(
                               horizontal: 30, vertical: 20),
-                          child: Text('VIEW RESUME'),
+                          child: Text('VIEW CV'),
                         ),
                       ],
                     ),
@@ -130,7 +130,7 @@ class About extends StatelessWidget {
                 textColor: Colors.white,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-                child: Text('VIEW RESUME'),
+                child: Text('VIEW CV'),
               ),
               const SizedBox(height: 50),
               Text('MY SKILLS', style: AppStyles.title),
@@ -151,7 +151,7 @@ class About extends StatelessWidget {
       );
 
   void _downloadCV() {
-    launch(AppConstants.cv);
+    launchUrlString(AppConstants.cv, webOnlyWindowName: '_blank');
   }
 
   Widget _buildSkill(Skill skill) => Chip(label: Text(skill.name!));

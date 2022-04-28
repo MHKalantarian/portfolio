@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/responsive_widget.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../config/colors.dart';
 import '../config/constants.dart';
@@ -122,7 +122,7 @@ class _HomeState extends State<Home> {
                       MaterialButton(
                         onPressed: _scrollToRecentProjects,
                         child: Text(
-                          'Portfolio',
+                          'Projects',
                           style: TextStyle(
                               color: Colors.white, fontWeight: FontWeight.bold),
                         ),
@@ -158,30 +158,42 @@ class _HomeState extends State<Home> {
             child: Column(
               children: [
                 ListTile(
-                  onTap: _scrollToAbout,
+                  onTap: () {
+                    _scrollToAbout();
+                    Navigator.pop(context);
+                  },
                   title: Text(
                     'About Me',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
                 ListTile(
-                  onTap: _scrollToStatistics,
+                  onTap: () {
+                    _scrollToStatistics();
+                    Navigator.pop(context);
+                  },
                   title: Text(
                     'Experience',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
                 ListTile(
-                  onTap: _scrollToWorkingProcess,
+                  onTap: () {
+                    _scrollToWorkingProcess();
+                    Navigator.pop(context);
+                  },
                   title: Text(
                     'Process',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
                 ListTile(
-                  onTap: _scrollToRecentProjects,
+                  onTap: () {
+                    _scrollToRecentProjects();
+                    Navigator.pop(context);
+                  },
                   title: Text(
-                    'Portfolio',
+                    'Projects',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -189,7 +201,10 @@ class _HomeState extends State<Home> {
                 const SizedBox(height: 20),
                 ListTile(
                   title: RaisedButton(
-                    onPressed: _scrollToContactUs,
+                    onPressed: () {
+                      _scrollToContactUs();
+                      Navigator.pop(context);
+                    },
                     color: AppColors.primary,
                     padding: const EdgeInsets.symmetric(
                       horizontal: 40,
@@ -197,7 +212,8 @@ class _HomeState extends State<Home> {
                     ),
                     child: Text(
                       'Contact Me',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
@@ -207,7 +223,8 @@ class _HomeState extends State<Home> {
                   children: [
                     InkWell(
                       onTap: () {
-                        launch(AppConstants.github);
+                        launchUrlString(AppConstants.github,
+                            webOnlyWindowName: '_blank');
                       },
                       child: AppIcon(
                         'icons/github.png',
@@ -217,7 +234,8 @@ class _HomeState extends State<Home> {
                     const SizedBox(width: 20),
                     InkWell(
                       onTap: () {
-                        launch(AppConstants.linkedin);
+                        launchUrlString(AppConstants.linkedin,
+                            webOnlyWindowName: '_blank');
                       },
                       child: AppIcon(
                         'icons/linkedin.png',
@@ -252,15 +270,7 @@ class _HomeState extends State<Home> {
                       onTap: () {
                         Scaffold.of(ctx).openDrawer();
                       },
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(1000),
-                        child: Container(
-                          width: 40,
-                          height: 40,
-                          color: AppColors.primary,
-                          child: Image.asset('images/avatar.jpg'),
-                        ),
-                      ),
+                      child: AppIcon('icons/list.png'),
                     ),
                   ),
                 ),

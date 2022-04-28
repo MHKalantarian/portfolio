@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mailto/mailto.dart';
 import 'package:portfolio/ui/icon.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../config/colors.dart';
 import '../config/constants.dart';
@@ -184,7 +184,7 @@ class _ContactUsState extends State<ContactUs> {
       body: _contentController.text.trim(),
     );
 
-    await launch('$mailtoLink');
+    await launchUrlString('$mailtoLink');
   }
 
   @override

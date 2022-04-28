@@ -9,9 +9,9 @@ List<Skill> SKILLS = [
   Skill(name: 'Java'),
   Skill(name: 'Kotlin'),
   Skill(name: 'Dart'),
+  Skill(name: 'SQL'),
+  Skill(name: 'Flutter'),
   Skill(name: 'Android'),
   Skill(name: 'iOS'),
-  Skill(name: 'Flutter'),
-  Skill(name: 'SQL'),
   Skill(name: 'Git'),
 ];
