@@ -17,7 +17,7 @@ class Statistics extends StatelessWidget {
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           _buildStatistic(context, 'icons/briefcase.png',
-              '${new DateTime.now().year - 2015}+', 'Years of Experience'),
+              '${new DateTime.now().year - 2014}+', 'Years of Experience'),
           _buildStatistic(context, 'icons/rocket.png',
               '${PROJECTS.length + 15}+', 'Projects Done'),
           _buildStatistic(context, 'icons/happy.png',
