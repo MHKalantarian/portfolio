@@ -5,7 +5,7 @@ import '../config/colors.dart';
 
 class Header extends StatelessWidget {
   final String _name = "Mohammad Hossein Kalantarian";
-  final String _job = "Senior Mobile Application Developer";
+  final String _job = "Senior Mobile Engineer";
 
   @override
   Widget build(BuildContext context) => ResponsiveWidget(
