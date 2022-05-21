@@ -90,41 +90,6 @@ class Footer extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(width: 20),
-                // MY RECENT PROJECTS
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 2,
-                            height: 20,
-                            color: AppColors.primary,
-                          ),
-                          const SizedBox(width: 7.5),
-                          Text(
-                            'RECENT PROJECTS',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          )
-                        ],
-                      ),
-                      const SizedBox(height: 20),
-                      Wrap(
-                        spacing: 10,
-                        runSpacing: 10,
-                        children: PROJECTS
-                            .take(6)
-                            .map((p) => _buildProject(context, p))
-                            .toList(),
-                      )
-                    ],
-                  ),
-                ),
               ],
             ),
             const SizedBox(height: 30),
@@ -207,39 +172,6 @@ class Footer extends StatelessWidget {
                     fontSize: 13,
                   ),
                 ),
-              ],
-            ),
-            const SizedBox(height: 30),
-            // MY RECENT PROJECTS
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      width: 2,
-                      height: 20,
-                      color: AppColors.primary,
-                    ),
-                    const SizedBox(width: 7.5),
-                    Text(
-                      'RECENT PROJECTS',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 20),
-                Wrap(
-                  spacing: 10,
-                  runSpacing: 10,
-                  children: PROJECTS
-                      .take(3)
-                      .map((p) => _buildProject(context, p))
-                      .toList(),
-                )
               ],
             ),
             const SizedBox(height: 30),

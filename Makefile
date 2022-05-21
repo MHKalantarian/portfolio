@@ -9,7 +9,6 @@ rebuild:
 
 # build web project and publish on gh-pages
 publish:
-	git push origin master
 	flutter pub global run peanut --web-renderer canvaskit --release
 	git push origin --set-upstream gh-pages
 
