@@ -11,5 +11,5 @@ rebuild:
 publish:
 	flutter pub global activate peanut
 	flutter pub global run peanut --web-renderer canvaskit --release
-	git push origin --set-upstream gh-pages
+	git push origin --set-upstream gh-pages --force
 
