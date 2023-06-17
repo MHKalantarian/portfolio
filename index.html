@@ -20,6 +20,7 @@
         });
 
 
+
     </script>
     <style>
         .spinner {
@@ -67,6 +68,7 @@
 
 
 
+
     </style>
 </head>
 <body>
@@ -76,7 +78,7 @@
     <div class="double-bounce2"></div>
 </div>
 <script>
-    var serviceWorkerVersion = "713343452";
+    var serviceWorkerVersion = "2053168974";
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -93,7 +95,7 @@
       // Service workers are supported. Use them.
       window.addEventListener('flutter-first-frame', function () {
         // Firebase
-        navigator.serviceWorker.register('flutter_service_worker.js?v=713343452');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=2053168974');
       });
       window.addEventListener('load', function () {
         // Wait for registration to finish before dropping the <script> tag.
@@ -147,6 +149,7 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+
 
 
 </script>
