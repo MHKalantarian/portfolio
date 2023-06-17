@@ -52,18 +52,21 @@ class About extends StatelessWidget {
                         Text(
                           _description,
                           style:
-                              Theme.of(context).textTheme.bodyText2!.copyWith(
+                              Theme.of(context).textTheme.bodyMedium!.copyWith(
                                     color: Colors.black.withOpacity(.7),
                                     fontSize: 17,
                                   ),
                         ),
                         const SizedBox(height: 30),
-                        RaisedButton(
+                        ElevatedButton(
                           onPressed: _downloadCV,
-                          color: AppColors.primary,
-                          textColor: Colors.white,
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 20),
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            backgroundColor: AppColors.primary,
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 30, vertical: 20),
+                            textStyle: TextStyle(color: Colors.white),
+                          ),
                           child: Text('VIEW CV'),
                         ),
                       ],
@@ -117,19 +120,21 @@ class About extends StatelessWidget {
               ),
               Text(
                 _description,
-                style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       color: Colors.black.withOpacity(.7),
                       fontSize: 13,
                     ),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 30),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: _downloadCV,
-                color: AppColors.primary,
-                textColor: Colors.white,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: AppColors.primary,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                ),
                 child: Text('VIEW CV'),
               ),
               const SizedBox(height: 50),

@@ -90,23 +90,24 @@ class MyProjects extends StatelessWidget {
                         SizedBox(
                           height: MediaQuery.of(context).size.width * .025,
                         ),
-                        OutlineButton(
+                        OutlinedButton(
                           onPressed: () {
                             launchUrlString(project.url!,
                                 webOnlyWindowName: '_blank');
                           },
-                          color: AppColors.primary,
-                          textColor: AppColors.primary,
-                          borderSide: BorderSide(
-                            color: AppColors.primary!.withOpacity(.5),
-                            width: 5,
-                          ),
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 50,
-                            vertical: 20,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: AppColors.primary,
+                            disabledForegroundColor:
+                                AppColors.primary?.withOpacity(0.38),
+                            side: BorderSide(
+                              color: AppColors.primary!.withOpacity(.5),
+                              width: 5,
+                            ),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 50, vertical: 20),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                           ),
                           child: Text('Visit'),
                         ),
@@ -155,22 +156,22 @@ class MyProjects extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.width * .025,
               ),
-              OutlineButton(
+              OutlinedButton(
                 onPressed: () {
                   launchUrlString(project.url!, webOnlyWindowName: '_blank');
                 },
-                color: AppColors.primary,
-                textColor: AppColors.primary,
-                borderSide: BorderSide(
-                  color: AppColors.primary!.withOpacity(.5),
-                  width: 5,
-                ),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 50,
-                  vertical: 20,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: AppColors.primary,
+                  disabledForegroundColor: AppColors.primary?.withOpacity(0.38),
+                  side: BorderSide(
+                    color: AppColors.primary!.withOpacity(.5),
+                    width: 5,
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                 ),
                 child: Text('Visit'),
               ),

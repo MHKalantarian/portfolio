@@ -49,7 +49,7 @@ class WorkingProcess extends StatelessWidget {
                       '03.',
                       'icons/coding.png',
                       'Code',
-                      'I start the development of your project and provide an output every phase for you to analyze and give your feedback.'),
+                      'I develop your project in phases, providing regular updates for you to analyze and give feedback.'),
                 )
               ],
             ),
@@ -80,7 +80,7 @@ class WorkingProcess extends StatelessWidget {
                 'I design each and every page of your project and provide a wireframe or a graphical interface.'),
             const SizedBox(height: 10),
             __buildProcess(context, '03.', 'icons/coding.png', 'Code',
-                'I start the development of your project and provide an output every phase for you to analyze and give your feedback.'),
+                'I develop your project in phases, providing regular updates for you to analyze and give feedback.'),
           ],
         ),
       ),

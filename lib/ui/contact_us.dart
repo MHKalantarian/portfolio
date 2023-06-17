@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mailto/mailto.dart';
-import 'package:portfolio/ui/icon.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../config/colors.dart';
@@ -61,35 +60,6 @@ class _ContactUsState extends State<ContactUs> {
             _buildContactForm(context)
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _buildContactInfo(String imagePath, String title, String content) {
-    return FittedBox(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          AppIcon(imagePath, color: AppColors.black.withOpacity(.7), size: 20),
-          const SizedBox(width: 10),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: TextStyle(
-                  color: AppColors.black,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 5),
-              Text(
-                content,
-                style: TextStyle(color: AppColors.black.withOpacity(.7)),
-              ),
-            ],
-          )
-        ],
       ),
     );
   }
@@ -158,11 +128,13 @@ class _ContactUsState extends State<ContactUs> {
                 ),
               ),
               const SizedBox(height: 20),
-              RaisedButton(
-                color: AppColors.primary,
-                textColor: Colors.white,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: AppColors.primary,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                ),
                 onPressed: _sendMail,
                 child: Text('Send'),
               ),

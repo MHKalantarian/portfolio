@@ -128,12 +128,12 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                       const SizedBox(width: 20),
-                      RaisedButton(
+                      ElevatedButton(
                         onPressed: _scrollToContactUs,
-                        color: AppColors.primary,
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 40,
-                          vertical: 15,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: AppColors.primary,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 40, vertical: 15),
                         ),
                         child: Text(
                           'Contact Me',
@@ -200,15 +200,15 @@ class _HomeState extends State<Home> {
                 Divider(),
                 const SizedBox(height: 20),
                 ListTile(
-                  title: RaisedButton(
+                  title: ElevatedButton(
                     onPressed: () {
                       _scrollToContactUs();
                       Navigator.pop(context);
                     },
-                    color: AppColors.primary,
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 40,
-                      vertical: 15,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.primary,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 15),
                     ),
                     child: Text(
                       'Contact Me',

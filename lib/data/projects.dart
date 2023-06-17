@@ -11,20 +11,20 @@ class Project {
 // ignore: non_constant_identifier_names
 List<Project> PROJECTS = [
   Project(
-    name: 'Bama',
-    description:
-        'The dominant Iranian car and motorcycle vertical search engine which in addition to supplying a user-friendly platform for selling and buying cars by the users, provides them with up-to-date information and news on the Iranian and international car markets.',
-    image: 'images/projects/bama.png',
-    url: 'https://www.bama.ir/',
-    skills: ['Kotlin', 'Cross-platform'],
-  ),
-  Project(
     name: 'Hi',
     description:
         'Comprehensive intelligent location-based service system "Hi" with attractive and dynamic design for residents of the beautiful island of Kish and tourists, with the slogan "Always here, by your side and for you" and with the aim of using more technology, increasing speed and quality in receiving services.',
     image: 'images/projects/hi.png',
     url: 'https://www.hi-kish.ir',
     skills: ['Dart', 'Flutter', 'Cross-platform'],
+  ),
+  Project(
+    name: 'Bama',
+    description:
+        'The dominant Iranian car and motorcycle vertical search engine which in addition to supplying a user-friendly platform for selling and buying cars by the users, provides them with up-to-date information and news on the Iranian and international car markets.',
+    image: 'images/projects/bama.png',
+    url: 'https://www.bama.ir/',
+    skills: ['Kotlin', 'Cross-platform'],
   ),
   Project(
     name: 'Mopon',
