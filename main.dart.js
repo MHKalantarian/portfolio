@@ -69185,7 +69185,7 @@ A.a6u.prototype={
 $1(a){return A.ak2(a,10)?null:"Please insert valid message!, at least 10 characters"},
 $S:73}
 A.EX.prototype={
-H(a){var s,r,q,p=null,o="CONTACT ME",n="Email Address",m="MHKalantarian@gmail.com",l="Phone Number",k="(+98) 912 866 7882\n(+98) 936 554 2971",j="If you have an idea, I\u2019m here to turn your dream into a digital solution.",i=t.w,h=A.aG(a,p,i).w.a.a*0.15,g=$.iP(),f=t.p,e=A.f8(A.b([A.b6(p,p,g,p,20,p,p,2),B.vS,A.aF(o,p,p,p,A.b0(p,p,B.h,p,p,p,p,p,p,p,p,p,p,p,B.L,p,p,!0,p,p,p,p,p,p,p,p),p,p)],f),B.D,B.v,B.w),d=$.Sc()
+H(a){var s,r,q,p=null,o="CONTACT ME",n="Email Address",m="MHKalantarian@gmail.com",l="Phone Number",k="(+1) 413 424-0867\n(+98) 912 866-7882",j="If you have an idea, I\u2019m here to turn your dream into a digital solution.",i=t.w,h=A.aG(a,p,i).w.a.a*0.15,g=$.iP(),f=t.p,e=A.f8(A.b([A.b6(p,p,g,p,20,p,p,2),B.vS,A.aF(o,p,p,p,A.b0(p,p,B.h,p,p,p,p,p,p,p,p,p,p,p,B.L,p,p,!0,p,p,p,p,p,p,p,p),p,p)],f),B.D,B.v,B.w),d=$.Sc()
 e=A.f8(A.b([A.mb(A.c8(A.b([e,B.aw,A.aF(j,p,p,p,A.b0(p,p,d,p,p,p,p,p,p,p,p,13,p,p,p,p,p,!0,p,p,p,p,p,p,p,p),p,p),B.aw,A.aF(n,p,p,p,A.b0(p,p,d,p,p,p,p,p,p,p,p,p,p,p,B.c2,p,p,!0,p,p,p,p,p,p,p,p),p,p),B.f6,A.aF(m,p,p,p,A.b0(p,p,d,p,p,p,p,p,p,p,p,13,p,p,p,p,p,!0,p,p,p,p,p,p,p,p),p,p),B.aw,A.aF(l,p,p,p,A.b0(p,p,d,p,p,p,p,p,p,p,p,p,p,p,B.c2,p,p,!0,p,p,p,p,p,p,p,p),p,p),B.f6,A.aF(k,p,p,p,A.b0(p,p,d,p,p,p,p,p,p,p,p,13,p,p,p,p,p,!0,p,p,p,p,p,p,p,p),p,p)],f),B.aY,B.v,B.w))],f),B.aY,B.v,B.w)
 s=d.a
 r=s>>>16&255
