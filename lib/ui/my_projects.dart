@@ -62,7 +62,8 @@ class MyProjects extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: MediaQuery.of(context).size.width * .3,
+                    width: MediaQuery.of(context).size.width * 0.2,
+                    height: (MediaQuery.of(context).size.width * 0.2) * (16.0 / 9.0), // 16:9 aspect ratio
                     child: Image.asset(project.image!),
                   ),
                   SizedBox(width: MediaQuery.of(context).size.width * .075),
@@ -129,7 +130,8 @@ class MyProjects extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: MediaQuery.of(context).size.width * .75,
+                width: MediaQuery.of(context).size.width * 0.5,
+                height: (MediaQuery.of(context).size.width * 0.5) * (16.0 / 9.0), // 16:9 aspect ratio
                 child: Image.asset(project.image!),
               ),
               SizedBox(width: MediaQuery.of(context).size.width * .075),

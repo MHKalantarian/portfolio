@@ -11,6 +11,22 @@ class Project {
 // ignore: non_constant_identifier_names
 List<Project> PROJECTS = [
   Project(
+    name: 'SnappBox',
+    description:
+        'SnappBox is a sub-brand of Iran Internet Group’s Snapp, the first and major ride hailing app in Iran, which focuses on smart on-demand delivery platforms in the country. Connecting everyone, including businesses and customers, with the need of delivering goods.',
+    image: 'images/projects/snappbox.png',
+    url: 'https://app.snapp-box.com',
+    skills: ['Kotlin', 'Android'],
+  ),
+  Project(
+    name: 'SnappStore',
+    description:
+        'SnappStore is a restaurant management system that enables restaurateurs to seamlessly manage, streamline, and grow their business from anywhere and at any time.',
+    image: 'images/projects/snappstore.png',
+    url: 'https://www.snapp-store.com/',
+    skills: ['Kotlin', 'Android'],
+  ),
+  Project(
     name: 'Hi',
     description:
         'Comprehensive intelligent location-based service system "Hi" with attractive and dynamic design for residents of the beautiful island of Kish and tourists, with the slogan "Always here, by your side and for you" and with the aim of using more technology, increasing speed and quality in receiving services.',

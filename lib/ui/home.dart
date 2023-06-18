@@ -59,7 +59,7 @@ class _HomeState extends State<Home> {
               SliverAppBar(
                 key: _headerGlobalKey,
                 titleSpacing: 0,
-                toolbarHeight: 100,
+                toolbarHeight: 48,
                 backgroundColor: Colors.transparent,
                 flexibleSpace: Container(
                   decoration: BoxDecoration(
@@ -76,74 +76,157 @@ class _HomeState extends State<Home> {
                         colors: [
                           Colors.black,
                           Colors.black87,
-                          Colors.transparent
+                          Colors.transparent,
                         ],
                       ),
                     ),
                   ),
                 ),
-                title: Padding(
-                  padding: EdgeInsets.only(
-                    left: MediaQuery.of(context).size.width * .15,
-                  ),
-                ),
                 bottom: PreferredSize(
-                  preferredSize: Size.fromHeight(500),
+                  preferredSize: Size.fromHeight(512),
                   child: Header(),
                 ),
                 actions: [
-                  Row(
-                    children: [
-                      MaterialButton(
-                        onPressed: _scrollToAbout,
-                        highlightColor: Colors.white60,
-                        child: Text(
-                          'About Me',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(top: 8, left: 8, right: 8),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Flexible(
+                            fit: FlexFit.tight,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.white),
+                              ),
+                              child: ElevatedButton(
+                                onPressed: _scrollToAbout,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.transparent,
+                                  foregroundColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                                child: Text(
+                                  'About Me',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Flexible(
+                            fit: FlexFit.tight,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.white),
+                              ),
+                              child: ElevatedButton(
+                                onPressed: _scrollToStatistics,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.transparent,
+                                  foregroundColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                                child: Text(
+                                  'Experience',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Flexible(
+                            fit: FlexFit.tight,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.white),
+                              ),
+                              child: ElevatedButton(
+                                onPressed: _scrollToWorkingProcess,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.transparent,
+                                  foregroundColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                                child: Text(
+                                  'Process',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Flexible(
+                            fit: FlexFit.tight,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.white),
+                              ),
+                              child: ElevatedButton(
+                                onPressed: _scrollToRecentProjects,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.transparent,
+                                  foregroundColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                                child: Text(
+                                  'Projects',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Flexible(
+                            fit: FlexFit.tight,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: Colors.white),
+                              ),
+                              child: ElevatedButton(
+                                onPressed: _scrollToContactUs,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppColors.primary,
+                                  foregroundColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                                child: Text(
+                                  'Contact Me',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                      MaterialButton(
-                        onPressed: _scrollToStatistics,
-                        child: Text(
-                          'Experience',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      MaterialButton(
-                        onPressed: _scrollToWorkingProcess,
-                        child: Text(
-                          'Process',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      MaterialButton(
-                        onPressed: _scrollToRecentProjects,
-                        child: Text(
-                          'Projects',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      ElevatedButton(
-                        onPressed: _scrollToContactUs,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: AppColors.primary,
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 40, vertical: 15),
-                        ),
-                        child: Text(
-                          'Contact Me',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
-                  SizedBox(width: MediaQuery.of(context).size.width * .15),
                 ],
               ),
               ..._slivers(),
@@ -198,7 +281,6 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 Divider(),
-                const SizedBox(height: 20),
                 ListTile(
                   title: ElevatedButton(
                     onPressed: () {
@@ -208,7 +290,7 @@ class _HomeState extends State<Home> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.primary,
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 40, vertical: 15),
+                          horizontal: 15, vertical: 15),
                     ),
                     child: Text(
                       'Contact Me',
