@@ -68962,7 +68962,7 @@ A.pH.prototype={}
 A.q9.prototype={}
 A.G7.prototype={
 H(a){var s=null,r=A.akq(A.b4())
-return new A.v4(new A.um(s),"MHKalantarian",A.aka(s,A.ahB(s,s,B.Y,s,s,s,B.ds).a5g($.iS()),s,r),!1,s)}}
+return new A.v4(new A.um(s),"MHKalantarian Portfolio",A.aka(s,A.ahB(s,s,B.Y,s,s,s,B.ds).a5g($.iS()),s,r),!1,s)}}
 A.rB.prototype={
 H(a1){var s,r,q,p,o,n,m,l,k,j,i,h=null,g="ABOUT ME",f="MY SKILLS",e="images/avatar.jpg",d="Team player, detail-oriented and dedicated to projects, with the great ability to lead teams, boost morale and improve productivity.",c=t.w,b=A.aI(a1,h,c).w.a.a*0.15,a=A.e0(1000),a0=$.S8()
 a=A.ahw(a,A.aW(h,A.Fg(e,h,B.cl,300,300),a0,h,h,h,h,h))
