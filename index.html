@@ -4,24 +4,6 @@
     <meta charset="UTF-8">
     <title>MHKalantarian Portfolio</title>
     <meta content="Mohammad Hossein Kalantarian Portfolio" name="description">
-    <script defer src="main.dart.js" type="application/javascript">
-        jQuery(document).ready(function() {
-            //Preloader
-            jQuery(window).on("load", function() {
-            preloaderFadeOutTime = 500;
-            function hidePreloader() {
-                var wrapper = jQuery('.spinner-wrapper');
-                var spinner = jQuery('.spinner');
-                wrapper.fadeOut(preloaderFadeOutTime);
-                spinner.fadeOut(preloaderFadeOutTime);
-            }
-            hidePreloader();
-            });
-        });
-
-
-
-    </script>
     <style>
         .spinner {
             width: 40px;
@@ -39,36 +21,17 @@
             position: absolute;
             top: 0;
             left: 0;
-
-            -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
             animation: sk-bounce 2.0s infinite ease-in-out;
         }
 
         .double-bounce2 {
-            -webkit-animation-delay: -1.0s;
             animation-delay: -1.0s;
         }
 
-        @-webkit-keyframes sk-bounce {
-          0%, 100% { -webkit-transform: scale(0.0) }
-          50% { -webkit-transform: scale(1.0) }
-        }
-
         @keyframes sk-bounce {
-          0%, 100% {
-            transform: scale(0.0);
-            -webkit-transform: scale(0.0);
-          } 50% {
-            transform: scale(1.0);
-            -webkit-transform: scale(1.0);
-          }
+          0%, 100% { transform: scale(0.0) }
+          50% { transform: scale(1.0) }
         }
-
-
-
-
-
-
     </style>
 </head>
 <body>
@@ -78,8 +41,9 @@
     <div class="double-bounce2"></div>
 </div>
 <script>
-    var serviceWorkerVersion = "320843221";
+    var serviceWorkerVersion = "2471148422";
     var scriptLoaded = false;
+
     function loadMainDartJs() {
       if (scriptLoaded) {
         return;
@@ -95,7 +59,7 @@
       // Service workers are supported. Use them.
       window.addEventListener('flutter-first-frame', function () {
         // Firebase
-        navigator.serviceWorker.register('flutter_service_worker.js?v=320843221');
+        navigator.serviceWorker.register('flutter_service_worker.js?v=2471148422');
       });
       window.addEventListener('load', function () {
         // Wait for registration to finish before dropping the <script> tag.
@@ -103,22 +67,22 @@
         // potentially different versions.
         var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
         navigator.serviceWorker.register(serviceWorkerUrl)
-          .then((reg) => {
+          .then(function (reg) {
             function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener('statechange', () => {
+              serviceWorker.addEventListener('statechange', function () {
                 if (serviceWorker.state == 'activated') {
                   console.log('Installed new service worker.');
                   loadMainDartJs();
                 }
               });
             }
-           if (!reg.active && (reg.installing || reg.waiting)) {
+            if (!reg.active && (reg.installing || reg.waiting)) {
               // No active web worker and we have installed or are installing
               // one for the first time. Simply wait for it to activate.
-              if(reg.installing != null) {
+              if (reg.installing != null) {
                 waitForActivation(reg.installing);
               }
-              if(reg.waiting != null) {
+              if (reg.waiting != null) {
                 waitForActivation(reg.waiting);
               }
             } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
@@ -135,8 +99,8 @@
           });
 
         // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
-        setTimeout(() => {
+        // fallback to plain <script> tag.
+        setTimeout(function () {
           if (!scriptLoaded) {
             console.warn(
               'Failed to load app from service worker. Falling back to plain <script> tag.',
@@ -149,9 +113,6 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
-
-
-
 </script>
 </body>
 </html>
