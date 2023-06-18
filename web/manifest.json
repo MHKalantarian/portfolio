@@ -1,11 +1,11 @@
 {
   "name": "MHKalantarian Portfolio",
-  "short_name": "MHKalantarian",
+  "short_name": "Portfolio",
+  "description": "Showcasing my skills and projects through an interactive portfolio website.",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#2196F3",
-  "theme_color": "#2196F3",
-  "description": "Portfolio ",
+  "background_color": "#F5F5F5FF",
+  "theme_color": "#1976D2FF",
   "orientation": "portrait-primary",
   "prefer_related_applications": false,
   "icons": [
