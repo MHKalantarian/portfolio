@@ -20,7 +20,7 @@ class MyProjects extends StatelessWidget {
             const SizedBox(height: 3),
             Container(width: 75, height: 2, color: AppColors.primary),
             const SizedBox(height: 50),
-            ...PROJECTS.map((p) => _buildProject(context, p)).toList(),
+            ...projects.map((p) => _buildProject(context, p)).toList(),
           ],
         ),
       ),
@@ -42,7 +42,7 @@ class MyProjects extends StatelessWidget {
             Container(width: 50, height: 2, color: AppColors.primary),
             const SizedBox(height: 50),
             Wrap(
-              children: PROJECTS.map((p) => _buildProject(context, p)).toList(),
+              children: projects.map((p) => _buildProject(context, p)).toList(),
               spacing: 5,
               runSpacing: 5,
             ),
